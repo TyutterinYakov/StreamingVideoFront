@@ -1,6 +1,33 @@
 .player{
-    max-width: 85%;
+    max-width: 100%;
 }
 .text-center {
     text-align: center;
+}
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  .mt10{
+    margin-top: 10px;
+  }
+
+  .src{
+    text-decoration: none;
+    color: rgb(255, 255, 255) !important;
+  }
+
+
+  .wrap {
+      width: 100%;
+}
+.left, .right {
+    display: inline-block;
+    width: 100%;
+    margin-right: -100%;
+    vertical-align: bottom;
+}
+.right {
+    text-align: right;
 }

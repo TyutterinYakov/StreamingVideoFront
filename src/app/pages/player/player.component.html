@@ -1,11 +1,26 @@
-<div class="card">
-    <div class="text-center">
-        <video id="videoPlayer" controls class="player" #videoPlayer>
-        <source src="{{videoMetadata.streamUrl}}" type="{{videoMetadata.contentType}}">
-        Your browser does not support the video tag.
-        </video>
+<div class="bootstrap-wrapper">
+  <div class="container">
+<mat-card class="example-card">
+  <div class="text-center">
+    <video id="videoPlayer" controls class="player" #videoPlayer>
+    <source src="{{videoMetadata.streamUrl}}" type="{{videoMetadata.contentType}}">
+    </video>
+</div>
+<div class="mt10">
+  <mat-card-title>
+      {{videoMetadata.title}}
+    </mat-card-title>
+  <mat-card-header class="mt10">
+    <div mat-card-avatar class="example-header-image"></div>
+    <div class="wrap">
+    <mat-card-title class="mt10 src left"><a [routerLink]='"/channel/"+videoMetadata.userId'>{{videoMetadata.userName}}</a></mat-card-title>
+    <mat-card-title class="mt10 src right">Просмотров: {{videoMetadata.views}}</mat-card-title>
     </div>
-    <div class="card-body">
-      <p class="card-text">{{videoMetadata.description}}</p>
-    </div>
-  </div>
+  </mat-card-header>
+<mat-card-content class="mt10">
+  {{videoMetadata.description}}
+</mat-card-content>
+</div>
+</mat-card>
+</div>
+</div>

@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { switchAll } from 'rxjs';
 import { VideoMetadata } from 'src/app/data/video-metadata';
 import { VideoService } from 'src/app/services/video.service';
@@ -11,12 +11,12 @@ import { VideoService } from 'src/app/services/video.service';
 })
 export class PlayerComponent implements OnInit {
 
-  public videoMetadata: VideoMetadata  = new VideoMetadata(0, '', '', '', '');
+  public videoMetadata: VideoMetadata  = new VideoMetadata(0, '', '', '', '', '', 0, 0, 0, 0, '');
 
   @ViewChild("videoPlayer") videoPlayerRef!: ElementRef;
   
   videoId=0;
-  constructor(public _video:VideoService, private _route: ActivatedRoute) { }
+  constructor(public _video:VideoService, private _route: ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
       this._video.getVideoById(this._route.snapshot.params['id'])
@@ -36,7 +36,7 @@ export class PlayerComponent implements OnInit {
           }
         },
         (error)=>{
-          alert("Error");
+          this.router.navigate(['/']);
           console.log(error); 
         }
     );

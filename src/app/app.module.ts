@@ -15,6 +15,18 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PlayerComponent } from './pages/player/player.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatCardModule} from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
+import { authInterceptorProviders } from './services/auth.interceptor';
+import { ChannelComponent } from './pages/channel/channel.component';
+import { CreateComponent } from './pages/user/create/create.component';
+import { SidebarComponent } from './pages/user/sidebar/sidebar.component';
+import {MatListModule} from '@angular/material/list';
+import { ChangeVideoComponent } from './pages/user/change-video/change-video.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +37,11 @@ import { PlayerComponent } from './pages/player/player.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    PlayerComponent
+    PlayerComponent,
+    ChannelComponent,
+    CreateComponent,
+    SidebarComponent,
+    ChangeVideoComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +50,16 @@ import { PlayerComponent } from './pages/player/player.component';
     MatIconModule,
     MatToolbarModule,
     MatMenuModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatListModule
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

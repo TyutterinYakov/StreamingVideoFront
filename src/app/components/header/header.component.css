@@ -4,14 +4,14 @@
   }
 
 .example-icon{
-    margin-top: 9px;
+    margin-bottom: 1px;
     margin-right: 5px;
     text-decoration: none;
     color: rgb(255, 255, 255) !important;
     
 }
 .color{
-  background-color: rgb(209, 41, 41);
+  background-color: black;
 }
 .button-menu{
   background-color: none;
