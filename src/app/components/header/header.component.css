@@ -1,0 +1,19 @@
+.example-spacer {
+    flex: 1 1 auto;
+    /* color: #fff; */
+  }
+
+.example-icon{
+    margin-top: 9px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: rgb(255, 255, 255) !important;
+    
+}
+.color{
+  background-color: rgb(209, 41, 41);
+}
+.button-menu{
+  background-color: none;
+  background: none;
+}

@@ -1,0 +1,11 @@
+<div class="card">
+    <div class="text-center">
+        <video id="videoPlayer" controls class="player" #videoPlayer>
+        <source src="{{videoMetadata.streamUrl}}" type="{{videoMetadata.contentType}}">
+        Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{videoMetadata.description}}</p>
+    </div>
+  </div>

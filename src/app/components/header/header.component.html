@@ -1,0 +1,71 @@
+<mat-toolbar class="color">
+    <a 
+    routerLink="/"
+     mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+     >
+      <mat-icon>videocam</mat-icon>
+    </a>
+    <span>YourVideo</span>
+    <span class="example-spacer"></span>
+    
+    <!-- <a
+
+    mat-icon-button
+     class="example-icon
+      favorite-icon"
+       aria-label="Example icon-button with heart icon">
+        
+      <mat-icon>login</mat-icon>
+    </a>
+    <a
+
+    mat-icon-button
+     class="example-icon
+      favorite-icon"
+       aria-label="Example icon-button with heart icon">
+        
+      <mat-icon>
+        app_registration
+        </mat-icon>
+    </a>
+    <a
+    
+    mat-icon-button
+     class="example-icon
+      favorite-icon"
+       aria-label="Example icon-button with heart icon">
+        
+      <mat-icon>
+        logout
+        </mat-icon>
+    </a> -->
+    <a
+    routerLink="/upload"
+    mat-icon-button
+     class="example-icon
+      favorite-icon"
+       aria-label="Example icon-button with heart icon">
+        
+      <mat-icon>
+        file_upload
+        </mat-icon>
+    </a>
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="button-menu" aria-label="Example icon-button with a menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>logout</mat-icon>
+          <span>Выйти</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>login</mat-icon>
+          <span>Войти</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>app_registration</mat-icon>
+          <span>Регистрация</span>
+        </button>
+      </mat-menu>
+    
+  </mat-toolbar>
